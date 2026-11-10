@@ -64,6 +64,10 @@ Requests through the public tunnel, all returning `200 OK`:
 
 ![Requests through the public ngrok URL](docs/screenshots/ngrok-requests.png)
 
+Web site served through the public URL:
+
+![Web site through the public URL](docs/screenshots/nginx-welcome.png)
+
 ## Deviations from the handbook
 
 - **Web site:** `nginx:alpine` with the handbook's ConfigMap, instead of the React build.
