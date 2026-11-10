@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tasks
+  labels:
+    app: tasks
+spec:
+  selector:
+    matchLabels:
+      app: tasks
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: tasks
+    spec:
+      initContainers:
+        - name: wait-for-db
+          image: postgres:18-alpine
+          command: ["sh", "-c"]
+          args:
+            - until pg_isready -h db -p 5432; do echo waiting for db; sleep 2; done
+      containers:
+        - name: tasks
+          image: tasks-api:1.0.0
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - secretRef:
+                name: db-credentials
+          env:
+            - name: DATABASE_URL
+              value: postgresql://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@db:5432/$(POSTGRES_DB)
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            periodSeconds: 5
+          livenessProbe:
+            tcpSocket:
+              port: 8000
+            periodSeconds: 10
+          resources:
+            requests:
+              cpu: 50m
+              memory: 96Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tasks
+spec:
+  selector:
+    app: tasks
+  ports:
+    - name: http
+      port: 8000
+      targetPort: 8000

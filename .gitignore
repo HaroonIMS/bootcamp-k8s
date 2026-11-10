@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.sql
+*.key
+*.crt
+tls/
+.env
