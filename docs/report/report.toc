@@ -1,0 +1,19 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Environment and preparation}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Machine and tools}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Disk space problem}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Incident: data loss on a partition}{4}{subsection.2.3}%
+\contentsline {section}{\numberline {3}From Compose to Kubernetes}{4}{section.3}%
+\contentsline {section}{\numberline {4}Laboratory work}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Lab 1: Building and exploring the cluster}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Lab 2: Release management}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Lab 3: Services and Ingress}{5}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Lab 4: A database that survives}{6}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Lab 5: Healthy and elastic}{6}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Lab 6: The capstone}{7}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Deviations from the handbook}{9}{section.5}%
+\contentsline {section}{\numberline {6}Problems encountered and lessons}{10}{section.6}%
+\contentsline {section}{\numberline {7}Discussion}{10}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{10}{section.8}%
+\contentsline {section}{\numberline {A}Repository layout}{11}{appendix.A}%
+\contentsline {section}{\numberline {B}Deployment order}{11}{appendix.B}%

@@ -80,3 +80,7 @@ Web site served through the public URL:
 - The tasks API has no authentication. Anyone with the public URL can read and change tasks.
 - The database has one replica and no automated backups off the cluster.
 - The development password is never stored in this repository.
+
+## Project report
+
+The full project report, with lab results, deviations, and lessons, is in [docs/report/report.pdf](docs/report/report.pdf). The LaTeX source is in [docs/report/report.tex](docs/report/report.tex).
